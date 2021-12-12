@@ -6,18 +6,17 @@
 #define WORD 30
 #define TXT 1024
 
+int main()
+{
 
-int main(){
+    // char Line[LINE];
+    readWord();
+    printf("reading TXT \n");
+    readTxT();
+    print_Gematria();
+    // getLine(Line);
 
-
-// char Line[LINE];
-readWord();
-printf("reading TXT \n");
-readTxT();
-// getLine(Line);
 
 
 return 0;
 }
-
-
