@@ -8,26 +8,48 @@
 char txt[TXT];
 char Word[WORD];
 //getting Line in the txt
-void getLine(char Line[])
+char readLine(char Line[])
 {
     int i = 1;
-
     char c = getc(stdin);
 
-    while (c != '\n' && c != EOT)
+    while (c != '\n')
     {
-       
+
+         
         Line[i] = c;
         i++;
-        c =  getc(stdin);;
+        c = getc(stdin);
+        
+          if(c==EOT){
+              break;
+          } 
+     
     }
-
+      
     Line[i] = '\n';
     Line[i + 1] = '\0';
+
+    return c;
+}
+void readTxT(char * str){
+    char line[LINE] = "";
+    char c;
+    while((c = getc(stdin)) != EOT){
+        if(c != '\n'){
+            line[0] = c;
+           char t =  readLine(line);
+            strcat(txt, line);
+             if(t==EOT){
+               break;
+           }
+            
+        }
+    }
+        printf("txt --> :\n%s", txt);
 }
 
-//getting the full Word with getc function
-void getWord()
+void readWord()
 {
     int i = 0;
     char c = getc(stdin);
@@ -45,5 +67,4 @@ void getWord()
     }
 
     Word[i] = '\0';
-  
 }

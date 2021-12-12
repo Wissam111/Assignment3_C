@@ -10,9 +10,12 @@
 int main(){
 
 
-char Line[LINE];
-getWord();
-getLine(Line);
+// char Line[LINE];
+readWord();
+printf("reading TXT \n");
+readTxT();
+// getLine(Line);
+
 
 return 0;
 }
